@@ -18,8 +18,11 @@ interface Props {
 const Banner: React.FC<Props> = ({ title, subtitle, content, linkTo, linkText }) => (
   <Styled.Banner>
     <Container section>
-      <TitleSection title={title} subtitle={subtitle} />
-      <Styled.Content>{content}</Styled.Content>
+      <div>
+        <TitleSection title={title} subtitle={subtitle} />
+        <Styled.Content>{content}</Styled.Content>
+        <Styled.Content>{`Recently build`}<a href="http://staging.indibill.in" target="_blank"> <u>IndiBill Invoicing App</u></a></Styled.Content>
+      </div>
       <Link to={linkTo}>
         <Button primary>{linkText}</Button>
       </Link>

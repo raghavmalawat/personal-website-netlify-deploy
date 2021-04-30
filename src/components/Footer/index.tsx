@@ -18,6 +18,13 @@ const Footer: React.FC = () => (
         >
           Github
         </Styled.Link>
+        <Styled.Link
+          href="https://www.goodreads.com/review/list/92765639-raghav-malawat/"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Goodreads
+        </Styled.Link>
       </Styled.Links>
     </Container>
   </Styled.Footer>
