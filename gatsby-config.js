@@ -40,13 +40,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-personal-website-starter`,
+        name: `Raghav Malawat - Portfolio`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#81e6d9`,
         theme_color: `#81e6d9`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`
+        icon: `src/assets/images/profile.jpg`
       }
     },
     `gatsby-plugin-offline`,
