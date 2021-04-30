@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Raghav Malawat - Portfolio`,
+        name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#81e6d9`,
