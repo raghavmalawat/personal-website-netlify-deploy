@@ -19,6 +19,7 @@ interface Testimonial {
     html: string;
     frontmatter: {
       title: string;
+      subtitle: string;
       cover: {
         childImageSharp: {
           fluid: ImageSharpFluid;
@@ -44,6 +45,7 @@ const Testimonials: React.FC = () => {
             html
             frontmatter {
               title
+              subtitle
               cover {
                 childImageSharp {
                   fluid(maxWidth: 80) {
@@ -70,7 +72,7 @@ const Testimonials: React.FC = () => {
             const {
               id,
               html,
-              frontmatter: { cover, title }
+              frontmatter: { cover, title, subtitle }
             } = item.node;
 
             return (
@@ -78,7 +80,10 @@ const Testimonials: React.FC = () => {
                 <Styled.Image>
                   <Img fluid={cover.childImageSharp.fluid} alt={title} />
                 </Styled.Image>
-                <Styled.Title>{title}</Styled.Title>
+                <div style={{ marginBottom: "1rem" }}>
+                  <Styled.Title>{title}</Styled.Title>
+                  <Styled.SubTitle>{subtitle}</Styled.SubTitle>
+                </div>
                 <FormatHtml content={html} />
               </Styled.Testimonial>
             );

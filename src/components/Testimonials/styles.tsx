@@ -18,5 +18,9 @@ export const Image = styled.figure`
 `;
 
 export const Title = styled.h3`
-  ${tw`font-semibold my-4`};
+  ${tw`font-semibold`};
+`;
+
+export const SubTitle = styled.span`
+  ${tw`italic text-sm my-4 text-indigo-600`};
 `;

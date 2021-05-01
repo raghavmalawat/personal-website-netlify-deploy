@@ -2,6 +2,7 @@
 category: 'testimonials'
 cover: './testimonial-1.jpg'
 title: 'Satej Sirur'
+subtitle: 'CEO, Rocketium'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+“Raghav finds his way out of any problem with hustle and hard work. He gets work done. He is self-motivated and fun to work with.”
