@@ -10,7 +10,7 @@ export const Project = styled.div`
 `;
 
 export const ProjectContainer = styled.div`
-  ${tw`w-full h-full rounded-lg flex overflow-hidden border border-gray-300`};
+  ${tw`w-full h-full rounded-lg flex flex-col sm:flex-row overflow-hidden border border-gray-300`};
   min-height: 450px;
 `;
 
@@ -33,9 +33,9 @@ export const SubTitle = styled.h1`
 export const Description = styled.p``;
 
 export const Tags = styled.div`
-  ${tw`pt-2`}
+  ${tw`pt-2 flex flex-wrap`}
 `;
 
 export const Tag = styled.span`
-  ${tw`text-xs uppercase italic text-teal-500 font-semibold bg-gray-100 border rounded-md px-2 py-1 mr-2`}
+  ${tw`text-xs uppercase italic text-teal-500 font-semibold bg-gray-100 border rounded-md px-2 py-1 mr-2 mb-2`}
 `;
