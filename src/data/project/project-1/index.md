@@ -1,12 +1,12 @@
 ---
 category: 'projects'
-cover: './indibill.png'
-title: 'IndiBill - Invoice App'
-subtitle: 'Create unlimited free digital bills. Creating invoices for your clients is now on your phone.'
-description1: 'Mobile Friendly Web App to create invoices for your business seamlessly. Supports multiple templates and advertisements on your bills'
+cover: './chat-app.png'
+title: 'Real-Time Chat'
+subtitle: 'Real Time Chat Application using Socket IO.'
+description1: 'Ideal for group chats where users can create rooms and be a part of the room to interact with others.'
 description2: ''
-hrefLink: 'http://staging.indibill.in'
-tags: ['React (JS)', 'Node (TS)', 'Postgresql', 'AWS']
+hrefLink: 'https://chat-app-raghavmalawat.herokuapp.com/'
+tags: ['Node JS', 'Socket IO', 'MongoDB', 'Heroku']
 ---
 
 A full-time Math junkie and a part-time noob coder. Started my coding journey with QBasic terminal while in std 7 and been engrossed since then.
