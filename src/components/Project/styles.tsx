@@ -19,7 +19,7 @@ export const Content = styled.div`
 `;
 
 export const Image = styled.figure`
-  ${tw`w-full py-4 px-8`};
+  ${tw`w-full py-4 px-8 m-auto`};
 `;
 
 export const Title = styled.h1`

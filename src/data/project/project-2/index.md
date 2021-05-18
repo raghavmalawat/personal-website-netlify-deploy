@@ -1,10 +1,10 @@
 ---
 category: 'projects'
-cover: './indibill.png'
-title: 'IndiBill - Invoice App'
-subtitle: 'Create unlimited free digital bills. Creating invoices for your clients is now on your phone.'
-description1: 'Mobile Friendly Web App to create invoices for your business seamlessly. Supports multiple templates and advertisements on your bills'
-description2: ''
-hrefLink: 'http://staging.indibill.in'
-tags: ['React (JS)', 'Node (TS)', 'Postgresql', 'AWS']
+cover: './guardDeployment.png'
+title: 'MyGate - Deployment Tool'
+subtitle: 'Batch Deployment Tool for Android devices'
+description1: 'Seamlessly upgrade app - forced/regular for all the devices'
+description2: 'Configured for Re-deployments on a zonal level.'
+# hrefLink: ''
+tags: ['React (JS)', 'Node (JS)', 'MongoDB', 'AWS']
 ---
