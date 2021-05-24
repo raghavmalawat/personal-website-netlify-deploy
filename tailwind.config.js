@@ -3,9 +3,9 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          100: '#EEF0FC',
-          300: '#476AE1',
-          400: '#476AE1'
+          100: "var(--primary-100)",
+          300: 'var(--primary-300)',
+          400: 'var(--primary-400)'
         }
       }
     }

@@ -5,6 +5,7 @@ module.exports = {
     author: `Raghav Malawat`
   },
   plugins: [
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
