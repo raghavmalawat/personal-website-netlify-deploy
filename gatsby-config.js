@@ -31,6 +31,14 @@ module.exports = {
               maxWidth: 768,
               linkImagesToOriginal: false
             }
+          },
+          {
+            resolve: `gatsby-remark-embed-snippet`,
+            options: {},
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {},
           }
         ]
       }
@@ -46,7 +54,7 @@ module.exports = {
         background_color: `#81e6d9`,
         theme_color: `#81e6d9`,
         display: `minimal-ui`,
-        icon: `src/assets/images/profile.png`
+        icon: `src/assets/images/favicon.png`
       }
     },
     `gatsby-plugin-offline`,
