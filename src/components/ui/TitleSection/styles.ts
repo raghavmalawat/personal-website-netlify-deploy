@@ -10,7 +10,7 @@ export const TitleSection = styled.div`
 `;
 
 export const Title = styled.h2<StyledProps>`
-  ${tw`uppercase mb-4 text-lg font-bold w-full text-left`};
+  ${tw`uppercase mb-4 text-2xl font-bold w-full text-left`};
   ${({ center }) => center && tw`text-center`};
 `;
 

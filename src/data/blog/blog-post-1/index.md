@@ -1,27 +1,43 @@
 ---
 category: 'blog'
 cover: './cover.jpg'
-title: 'Blog Post 1'
-description: 'Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat.'
-date: '2019-11-13'
-tags: ['Photography']
+title: 'Facade Design Pattern'
+description: 'A structural design pattern that serves as a simplified front-facing interface masking more complex underlying or structural code.'
+date: '2020-11-18'
+tags: ['Design Pattern']
 published: true
 ---
 
-_Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat._.
+**Problem**
 
-**Sed ut perspiciatis unde omnis**
+Imagine a problem which needs solutioning, but for which multiple components have to be handled and made to work in coordination and in an intended sequence for maybe some of them.
 
-![Aliquet vel mollis nec](./cover.jpg)
+In such cases there are 2 options - 
 
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+<pre>
 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    1.  The client interacts with all the components themselves
+    2.  The client makes a simple request to a black box and just get the desired result
 
-**Sconsectetur, adipisci velits**
+</pre>
+**Solution**
 
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+A facade is a class that provides an easy to use interface which is linked to a complex subsystem. In the above point 2 is symbolic of a facade pattern.
+<br>
+<br>
+<br>
+![Facade](./facade_diagram.png)
 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+Let us take an example of a restaurant to understand it better. Let us consider 2 models here - 
 
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+One, a self service restaurant where the user needs to go the billing counter, choose a dish and make the payment, and often has to find a table in such crowded places too. After that one goes to the respective counter depending on the cuisine one has bought a token for and waits till one's food is prepared. Once prepared, comes and enjoys their meal.
+
+On the other hand, consider a fine dining where you just go and at the entrance itself you get assigned a waiter for you who help you find the right comfortable table, he/she takes your order and takes that order to the kitchen, to the respective counter where your meal will be prepared. Once prepared the waiter brings the food hot and fresh and serves it on your table. He even presents you with the cheque/bill at the end of your meal.
+
+Just think, you were just sitting at tyhe table while the waiter did all the coordination required for the end result i.e serving you a fresh meal.
+
+This is a pretty simple example of a facade pattern we observe on a daily basis.
+
+<ul>
+<li>dcdc</li>
+</ul>
