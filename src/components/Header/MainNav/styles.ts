@@ -13,8 +13,11 @@ export const MainNav = styled.nav<StyledProps>`
 `;
 
 export const MainNavItem = motion.custom(styled(Link)`
-  ${tw`relative text-indigo-900 border-b border-transparent hover:text-indigo-900 ml-0 sm:ml-8 mt-3 sm:mt-0`};
+  ${tw`relative text-indigo-900 border-b uppercase border-transparent hover:text-indigo-900 ml-0 sm:ml-8 mt-3 sm:mt-0`};
   width: max-content;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 1.1rem;
 
   &.active {
     ${tw`border-primary-400`};

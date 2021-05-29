@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import * as Styled from './styles';
+import "@fontsource/raleway"
 
 interface MainNavItem {
   title: string;

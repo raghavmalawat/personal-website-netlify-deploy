@@ -9,6 +9,9 @@ import Newsletter from 'components/Newsletter';
 import 'assets/styles/global.css';
 import GlobalStyles from 'assets/styles/globalStyles';
 import * as Styled from './styles';
+import './layout.css';
+import "@fontsource/inter"
+import "@fontsource/lato"
 
 interface Props {
   children: React.ReactNode;
