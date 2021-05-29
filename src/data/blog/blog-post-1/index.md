@@ -1,12 +1,13 @@
 ---
 category: 'blog'
-cover: './cover.jpg'
+cover: './facade_logo.png'
 title: 'Facade Design Pattern'
 description: 'A structural design pattern that serves as a simplified front-facing interface masking more complex underlying or structural code.'
 date: '2020-11-18'
 tags: ['Design Pattern']
 published: true
 ---
+![facade Diagram](./facade_logo.png)
 
 **Problem**
 
@@ -26,6 +27,7 @@ A facade is a class that provides an easy to use interface which is linked to a 
 <br>
 <br>
 <br>
+
 ![Facade](./facade_diagram.png)
 
 Let us take an example of a restaurant to understand it better. Let us consider 2 models here - 
