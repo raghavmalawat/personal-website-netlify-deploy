@@ -39,7 +39,3 @@ On the other hand, consider a fine dining where you just go and at the entrance 
 Just think, you were just sitting at tyhe table while the waiter did all the coordination required for the end result i.e serving you a fresh meal.
 
 This is a pretty simple example of a facade pattern we observe on a daily basis.
-
-<ul>
-<li>dcdc</li>
-</ul>

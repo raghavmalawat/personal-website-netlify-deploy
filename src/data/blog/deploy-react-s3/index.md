@@ -18,7 +18,7 @@ _Without waiting any longer let's dive in._
 
 Let us take a step wise approach to the problem and bifurcate it for ease of understanding. 
 
-1..  Create a bucket and add relevant permissions.
+1.. Create a bucket and add relevant permissions.
 
 2.. Create the react build locally
 
