@@ -1,9 +1,10 @@
 ---
 category: 'experiences'
 company: 'MyGate'
+companyLink: 'https://mygate.com/'
 position: 'Software Engineer'
 startDate: 'Jul 2020'
-endDate: 'Present'
+endDate: 'Aug 2021'
 ---
 
 <b>Single handedly shipped various React projects</b> - deployment engine and unified device dashboard being some notable contributions.

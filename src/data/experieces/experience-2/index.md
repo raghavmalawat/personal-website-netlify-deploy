@@ -1,6 +1,7 @@
 ---
 category: 'experiences'
 company: 'Draup'
+companyLink: 'https://draup.com/'
 position: 'Intern'
 startDate: 'Jan 2020'
 endDate: 'Mar 2020'

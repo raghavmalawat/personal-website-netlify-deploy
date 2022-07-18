@@ -1,6 +1,7 @@
 ---
 category: 'experiences'
 company: 'Rocketium'
+companyLink: 'https://rocketium.com/'
 position: 'Intern'
 startDate: 'Oct 2018'
 endDate: 'Dec 2018'

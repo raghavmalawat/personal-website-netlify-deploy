@@ -14,6 +14,7 @@ interface Experience {
     html: React.ReactNode;
     frontmatter: {
       company: string;
+      companyLink: string;
       position: string;
       startDate: string;
       endDate: string;
@@ -40,6 +41,7 @@ const Experience: React.FC = () => {
             html
             frontmatter {
               company
+              companyLink
               position
               startDate
               endDate
@@ -61,13 +63,14 @@ const Experience: React.FC = () => {
         const {
           id,
           html,
-          frontmatter: { company, position, startDate, endDate }
+          frontmatter: { company, companyLink, position, startDate, endDate }
         } = item.node;
 
         return (
           <Timeline
             key={id}
             title={company}
+            companyLink={companyLink}
             subtitle={position}
             content={<FormatHtml content={html} />}
             startDate={startDate}
