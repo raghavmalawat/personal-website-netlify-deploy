@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'TypeScript'
+title: 'React'
 percentage: 50
 ---

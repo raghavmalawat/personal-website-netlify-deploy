@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'NodeJS'
-percentage: 50
+title: ' Ruby On Rails'
+percentage: 60
 ---
