@@ -21,10 +21,10 @@ const mainNavItems: MainNavItem[] = [
     title: 'Projects',
     slug: '/projects'
   },
-  // {
-  //   title: 'Blog',
-  //   slug: '/blog'
-  // },
+  {
+    title: 'Blog',
+    slug: '/blog'
+  },
   {
     title: 'Contact Me',
     slug: '/contact'
