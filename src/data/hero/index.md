@@ -6,6 +6,6 @@ content: "Hello 👋, I'm Raghav Malawat, a FullStack developer based out of Ben
 Always up for conversations around the Indian equity markets and the startup ecosystem in general 🚀. Currently working as a Product engineer alongside amazing folks at CoLearn.
 \n\n
 I have always been fascinated by coding and problem solving in general, been coding since age 14 and luckily the first engineer from my family. Crossed paths with a lot of smart, hard working folks till now in the industry and hope to meet more similar folks who are as equally passionate about their craft as I am. Cheers 🍻!"
-linkTo: '/resume'
+linkTo: '/experiences'
 linkText: 'View My Profile'
 ---
