@@ -44,46 +44,30 @@ Okay, so now we need to make our bucket public. Head over to the <u>Permissions<
 Let's start with the CORS policy
 
 Copy the below snippet in the CORS edit section
-```
-[
-    {
-        "AllowedHeaders": [
-            "*"
-        ],
-        "AllowedMethods": [
-            "POST",
-            "GET",
-            "PUT"
-        ],
-        "AllowedOrigins": [
-            "http://staging.xyz.com"
-        ],
-        "ExposeHeaders": []
-    }
-]
-```
+
+<br>
+
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=application%2Fjson&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=%255B%250A%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522AllowedHeaders%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522*%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%255D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522AllowedMethods%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522POST%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522GET%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522PUT%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%255D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522AllowedOrigins%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522http%253A%252F%252Fstaging.xyz.com%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%255D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522ExposeHeaders%2522%253A%2520%255B%255D%250A%2520%2520%2520%2520%257D%250A%255D"
+style="width: 1024px; height: 520px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
+
+<br>
 
 By mentioning "http://staging.xyz.com" I am explicitly restricting my POST, GET and PUT calls to the mentioned domain. 
 
 Now under the Bucket policy section, paste the below snippet 
 
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowPublicReadAccess",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:*",
-            "Resource": [
-                "arn:aws:s3:::staging.xyz.com",
-                "arn:aws:s3:::staging.xyz.com/*"
-            ]
-        }
-    ]
-}
-```
+<br>
+
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=application%2Fjson&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=%257B%250A%2520%2520%2520%2520%2522Version%2522%253A%2520%25222012-10-17%2522%252C%250A%2520%2520%2520%2520%2522Statement%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Sid%2522%253A%2520%2522AllowPublicReadAccess%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Effect%2522%253A%2520%2522Allow%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Principal%2522%253A%2520%2522*%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Action%2522%253A%2520%2522s3%253A*%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Resource%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522arn%253Aaws%253As3%253A%253A%253Astaging.xyz.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522arn%253Aaws%253As3%253A%253A%253Astaging.xyz.com%252F*%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%255D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%255D%250A%257D"
+style="width: 1024px; height: 502px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
+
+<br>
 
 <b>NB:</b> In the Resources list the arn should be the one relevant to your bucket, the above shown is for my bucket staging.xyz.com
 
