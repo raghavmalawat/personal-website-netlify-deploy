@@ -3,7 +3,7 @@ import tw from 'tailwind.macro';
 
 export default createGlobalStyle`
   * {
-    ${tw`max-w-full`};
+    ${tw`overflow-x-scroll`};
   }
   
   body {
