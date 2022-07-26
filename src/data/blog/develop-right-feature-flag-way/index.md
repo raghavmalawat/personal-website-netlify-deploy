@@ -125,13 +125,11 @@ Here’s a 4-step approach to help you integrate feature flags in your Ruby code
 
 <br>
 
- ```ruby
- gem "flipper"
- gem "flipper-ui"
- gem "flipper-active_record"
-
- RUN bundle install
- ```
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=ruby&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=%2520gem%2520%2522flipper%2522%250A%2520gem%2520%2522flipper-ui%2522%250A%2520gem%2520%2522flipper-active_record%2522%250A%250A%2520RUN%2520bundle%2520install"
+style="width: 875px; height: 249px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
 
 <br>
 
@@ -139,10 +137,11 @@ Here’s a 4-step approach to help you integrate feature flags in your Ruby code
 
 <br>
 
- ```ruby
- RUN bin/rails g flipper:active_record
- RUN bin/rails db:migrate
- ```
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=ruby&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=%2520RUN%2520bin%252Frails%2520g%2520flipper%253Aactive_record%250A%2520RUN%2520bin%252Frails%2520db%253Amigrate"
+style="width: 875px; height: 173px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
 
 <br>
 
@@ -150,32 +149,11 @@ You will see a new migration file added as below
 
 <br>
 
- ```ruby
- class CreateFlipperTables < ActiveRecord::Migration[6.1]
-   def self.up
-     create_table :flipper_features do |t|
-       t.string :key, null: false
-       t.timestamps null: false
-     end
-
-     add_index :flipper_features, :key, unique: true
-
-     create_table :flipper_gates do |t|
-       t.string :feature_key, null: false
-       t.string :key, null: false
-       t.string :value
-       t.timestamps null: false
-     end
-
-     add_index :flipper_gates, [:feature_key, :key, :value], unique: true
-   end
-
-   def self.down
-     drop_table :flipper_gates
-     drop_table :flipper_features
-   end
- end
- ```
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=ruby&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=class%2520CreateFlipperTables%2520%253C%2520ActiveRecord%253A%253AMigration%255B6.1%255D%250A%2520%2520%2520def%2520self.up%250A%2520%2520%2520%2520%2520create_table%2520%253Aflipper_features%2520do%2520%257Ct%257C%250A%2520%2520%2520%2520%2520%2520%2520t.string%2520%253Akey%252C%2520null%253A%2520false%250A%2520%2520%2520%2520%2520%2520%2520t.timestamps%2520null%253A%2520false%250A%2520%2520%2520%2520%2520end%250A%250A%2520%2520%2520%2520%2520add_index%2520%253Aflipper_features%252C%2520%253Akey%252C%2520unique%253A%2520true%250A%250A%2520%2520%2520%2520%2520create_table%2520%253Aflipper_gates%2520do%2520%257Ct%257C%250A%2520%2520%2520%2520%2520%2520%2520t.string%2520%253Afeature_key%252C%2520null%253A%2520false%250A%2520%2520%2520%2520%2520%2520%2520t.string%2520%253Akey%252C%2520null%253A%2520false%250A%2520%2520%2520%2520%2520%2520%2520t.string%2520%253Avalue%250A%2520%2520%2520%2520%2520%2520%2520t.timestamps%2520null%253A%2520false%250A%2520%2520%2520%2520%2520end%250A%250A%2520%2520%2520%2520%2520add_index%2520%253Aflipper_gates%252C%2520%255B%253Afeature_key%252C%2520%253Akey%252C%2520%253Avalue%255D%252C%2520unique%253A%2520true%250A%2520%2520%2520end%250A%250A%2520%2520%2520def%2520self.down%250A%2520%2520%2520%2520%2520drop_table%2520%253Aflipper_gates%250A%2520%2520%2520%2520%2520drop_table%2520%253Aflipper_features%250A%2520%2520%2520end%250A%2520end"
+style="width: 875px; height: 755px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
 
 <br>
 
@@ -184,23 +162,11 @@ You will see a new migration file added as below
 
 <br>
 
- ```ruby
- flipper_app = Flipper::UI.app(Flipper.instance) do |builder|
-   builder.use Rack::Auth::Basic do |username, password|
-     ActiveSupport::SecurityUtils.secure_compare(
-       Digest::SHA256.hexdigest(username),
-       Digest::SHA256.hexdigest(ENV['ADMIN_USERNAME']
-     )) &&
-     ActiveSupport::SecurityUtils.secure_compare(
-       Digest::SHA256.hexdigest(password),
-       Digest::SHA256.hexdigest(ENV['ADMIN_PASSWORD']
-     ))
-   end
- end
-
- Rails.application.routes.draw do
-   mount flipper_app => '/flipper'
- ```
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=ruby&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=flipper_app%2520%253D%2520Flipper%253A%253AUI.app%28Flipper.instance%29%2520do%2520%257Cbuilder%257C%250A%2520%2520builder.use%2520Rack%253A%253AAuth%253A%253ABasic%2520do%2520%257Cusername%252C%2520password%257C%250A%2520%2520%2520%2520%2520ActiveSupport%253A%253ASecurityUtils.secure_compare%28%250A%2520%2520%2520%2520%2520%2520%2520Digest%253A%253ASHA256.hexdigest%28username%29%252C%250A%2520%2520%2520%2520%2520%2520%2520Digest%253A%253ASHA256.hexdigest%28ENV%255B%27ADMIN_USERNAME%27%255D%250A%2520%2520%2520%2520%2520%29%29%2520%2526%2526%250A%2520%2520%2520%2520%2520ActiveSupport%253A%253ASecurityUtils.secure_compare%28%250A%2520%2520%2520%2520%2520%2520%2520Digest%253A%253ASHA256.hexdigest%28password%29%252C%250A%2520%2520%2520%2520%2520%2520%2520Digest%253A%253ASHA256.hexdigest%28ENV%255B%27ADMIN_PASSWORD%27%255D%250A%2520%2520%2520%2520%2520%29%29%250A%2520%2520%2520end%250A%2520end%250A%250A%2520Rails.application.routes.draw%2520do%250A%2520%2520%2520mount%2520flipper_app%2520%253D%253E%2520%27%252Fflipper%27"
+style="width: 875px; height: 502px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
 
 <br>
 
@@ -208,13 +174,11 @@ You will see a new migration file added as below
 
 <br>
 
- ```ruby
- if Flipper.enabled?(:billing)
-   # get paid
- else
-   # wish you were getting paid
- end
- ```
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=ruby&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=if%2520Flipper.enabled%253F%28%253Apay_intern%29%250A%2520%2520%2523%2520get%2520paid%250Aelse%250A%2520%2520%2523%2520wish%2520you%2520were%2520getting%2520paid%250Aend"
+style="width: 875px; height: 215px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
 
 <br>
 
