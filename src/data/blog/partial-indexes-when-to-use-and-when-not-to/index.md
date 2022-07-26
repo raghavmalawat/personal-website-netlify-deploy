@@ -19,18 +19,18 @@ Now that we know what indexes are in general, let us jump into partial indexes a
 
 **What is Partial Indexing?**
 
-Partial Indexes allows one to index a subset of rows, one can aadd a “WHERE” condition selecting only the rows where you know you have your answer. While index serves the purpose, it includes many rows that are never searched. Finding a fancy ball in a small bag is much easier and faster than in a big one containing more balls.
+Partial Indexes allows one to index a subset of rows, one can add a “WHERE” condition selecting only the rows where you know you have your answer. While index serves the purpose, it includes many rows that are never searched. Finding a fancy ball in a small bag is much easier and faster than in a big one containing more balls.
 
 A partial index is useful for commonly used where conditions that have certain constant values like NULL or an enum value, etc.
 
 <br>
 
-```
-SELECT name, desription, status
-FROM articles
-WHERE status = 'PUBLISHED'
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=sql&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=SELECT%2520name%252C%2520desription%252C%2520status%250AFROM%2520articles%250AWHERE%2520status%2520%253D%2520%27PUBLISHED%27%253B"
+style="width: 875px; height: 198px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
 
-```
 <br>
 
 The index only contains rows that satisfy the where clause, this means the index reduces its size in two directions, vertically by including only a subset of rows and horizontally  by only considering the columns that will be queried.
@@ -51,9 +51,11 @@ In this case we will be making paginated queries for only the “PUBLISHED” ar
 
 <br>
 
-```
-Select * from articles where status=“PUBLISHED”;
-```
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=sql&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=SELECT%2520*%2520FROM%2520articles%2520WHERE%2520status%2520%253D%2520%27PUBLISHED%27%253B"
+style="width: 875px; height: 147px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
 
 <br>
 
@@ -65,11 +67,11 @@ Let’s say now you have a functionality that the author can save multiple “DR
 
 <br>
 
-```
-CREATE  UNIQUE INDEX article_published_constraint 
-ON articles (author_id, article_type)
-WHERE status = “PUBLISHED”
-```
+<iframe
+src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=night-owl&wt=none&l=sql&width=675&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=24px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=181%25&si=false&es=1x&wm=false&code=CREATE%2520UNIQUE%2520INDEX%2520article_published_constraint%2520%250AON%2520articles%2520%28author_id%252C%2520article_type%29%250AWHERE%2520status%2520%253D%2520%27PUBLISHED%27%253B"
+style="width: 875px; height: 198px; border:0; transform: scale(1); overflow:hidden;"
+sandbox="allow-scripts allow-same-origin">
+</iframe>
 
 <br>
 
