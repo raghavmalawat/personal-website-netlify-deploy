@@ -15,6 +15,7 @@ interface Education {
     frontmatter: {
       university: string;
       degree: string;
+      companyLink: string;
       startDate: string;
       endDate: string;
     };
@@ -41,6 +42,7 @@ const Education: React.FC = () => {
             frontmatter {
               university
               degree
+              companyLink
               startDate
               endDate
             }
@@ -61,7 +63,7 @@ const Education: React.FC = () => {
         const {
           id,
           html,
-          frontmatter: { university, degree, startDate, endDate }
+          frontmatter: { university, degree, companyLink, startDate, endDate }
         } = item.node;
 
         return (
@@ -69,6 +71,7 @@ const Education: React.FC = () => {
             key={id}
             title={university}
             subtitle={degree}
+            companyLink={companyLink}
             content={<FormatHtml content={html} />}
             startDate={startDate}
             endDate={endDate}

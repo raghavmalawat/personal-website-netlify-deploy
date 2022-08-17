@@ -4,6 +4,7 @@ university: 'PES University'
 degree: 'Bachelor'
 startDate: 'Aug 2016'
 endDate: 'Jul 2020'
+companyLink: 'https://pesitsouth.pes.edu/'
 ---
 
 Some personal favourite courses in the pool of classes I took are System Design, Software Architecture, DSA, Object Oriented Modelling and Design, Cryptography and all the high scoring subjects.
