@@ -11,7 +11,7 @@ export default createGlobalStyle`
   }
 
   a {
-    ${tw`text-indigo-600 hover:text-indigo-700`};
+    ${tw`font-bold text-blue-600 hover:text-indigo-700`};
   }
 
   p + p {

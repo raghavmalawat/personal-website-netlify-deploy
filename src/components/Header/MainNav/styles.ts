@@ -17,7 +17,7 @@ export const MainNavItem = motion.custom(styled(Link)`
   width: max-content;
   font-family: Raleway;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 
   &.active {
     ${tw`border-primary-400`};

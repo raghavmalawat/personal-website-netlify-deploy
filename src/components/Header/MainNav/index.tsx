@@ -14,6 +14,10 @@ const mainNavItems: MainNavItem[] = [
     slug: ''
   },
   {
+    title: 'My Story',
+    slug: '/journey'
+  },
+  {
     title: 'Experiences',
     slug: '/experiences'
   },

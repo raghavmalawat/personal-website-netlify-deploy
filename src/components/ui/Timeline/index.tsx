@@ -4,18 +4,18 @@ import * as Styled from './styles';
 
 interface Props {
   title: string;
-  companyLink: string;
+  companyLink?: string;
   subtitle: string;
   content: React.ReactNode;
   startDate: string;
-  endDate: string;
+  endDate?: string;
 }
 
 const Timeline: React.FC<Props> = ({ title, companyLink, subtitle, content, startDate, endDate }) => (
   <Styled.Timeline>
     <Styled.Point />
     <Styled.Details>
-      <Styled.Date>{startDate} - {endDate}</Styled.Date>
+      <Styled.Date>{startDate}{endDate && ` - ${endDate}`}</Styled.Date>
       <a href={companyLink} rel="noreferrer noopener" target="_blank">
         <Styled.Title>{title}</Styled.Title>
       </a>
