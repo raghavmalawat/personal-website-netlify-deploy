@@ -34,15 +34,10 @@ const JourneyPage: React.FC = () => {
           content={
             <>
               <p>
-                I come from a family, where everyone has a commerce background, runs some sort of their own business, or is into full-time equity/derivatives day trading. My inherent 
+                I come from a family, where everyone has a commerce background, runs some sort of their own small business, or is into full-time equity/derivatives day trading. My inherent 
                 curiosity for computers and passion for problem-solving made me walk on the computer science path. I am the first engineer in my family and even the first one to take 
                 up a job.
               </p>
-              <p>
-                Never had the right guidance for this path and hence put all my focus on getting good marks in my high school board exams. Later reality hit me and realized 
-                that those marks are not at all important for the journey I was starting and didn't know which college to join. That's when I joined my friend Harsh, who was joining 
-                the PES Institute Of Technology. I trusted that he must be taking the best decision for himself and knowing that he was a smart guy, a hard-working guy I too joined PESIT.
-              </p>  
             </>                                                                                                                         
           }
           startDate={"Before 2016"}
@@ -54,8 +49,7 @@ const JourneyPage: React.FC = () => {
           content={
             <>
               <p>
-                PES College was amazing in the initial few years, but what I felt was it didn't provide ample amount of flexibility to the students and for the ones who want 
-                to lay out their path, I knew I had to break some rules and make it work.
+                After a lot of research and paddling in the waters I somehow landed at the PES Institute of Technology. Just like every other college student at that time, I tried my hands at the Data Science and ML field, only to realize I am more passionate about problem-solving in general.
               </p>
               <p>
                 Deep down I always knew I have to join startups and get my hands dirty, the sooner you start better it is. At the end of 2nd year of college i.e Oct 2018, 
