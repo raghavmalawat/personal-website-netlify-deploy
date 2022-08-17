@@ -21,7 +21,7 @@ const Banner: React.FC<Props> = ({ title, subtitle, content, linkTo, linkText })
       <div>
         <TitleSection title={title} subtitle={subtitle} />
         <Styled.Content>{content}</Styled.Content>
-        <Styled.Content>{`Recently built`}<a href="http://staging.indibill.in" target="_blank"> <u>IndiBill Invoicing App</u></a></Styled.Content>
+        {/* <Styled.Content>{`Recently built`}<a href="http://staging.indibill.in" target="_blank"> <u>IndiBill Invoicing App</u></a></Styled.Content> */}
       </div>
       <Link to={linkTo}>
         <Button primary>{linkText}</Button>
