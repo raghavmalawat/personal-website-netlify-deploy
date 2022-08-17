@@ -10,7 +10,7 @@ As a part of the <b>middle of the funnel</b> team I worked on delivering the bes
 Ranging from <b>reports to notifications to in-class and post-class practices to conduction of live class</b> in general, I've been an <b>active contributor in helping the product mature over time</b>, both towards engineering and at the product front.
 Building a product which your users love is a surreal feeling.
 
-<b>Leaded the entire re-architecture</b> of the backend systems with my pair, starting from conducting interviews with various stakeholders to <b>successful conduction of EventStorming session</b>, eventually leading to
+<b>Led the entire re-architecture</b> of the backend systems with my pair, starting from conducting interviews with various stakeholders to <b>successful conduction of EventStorming session</b>, eventually leading to
 identifying new data models to <b>building domain services the DDD way</b>, keeping <b>separate BFF layers</b> both at web and mobile fronts.
 
 <b>Actively paired at work and performed TDD all the while, keeping the test coverage > 95% all the time.</b>
