@@ -20,6 +20,7 @@ interface Testimonial {
     frontmatter: {
       title: string;
       subtitle: string;
+      url: string;
       cover: {
         childImageSharp: {
           fluid: ImageSharpFluid;
@@ -36,6 +37,7 @@ const Testimonials: React.FC = () => {
         frontmatter {
           title
           subtitle
+          url
         }
       }
       allMarkdownRemark(filter: { frontmatter: { category: { eq: "testimonials" } } }) {
@@ -46,6 +48,7 @@ const Testimonials: React.FC = () => {
             frontmatter {
               title
               subtitle
+              url
               cover {
                 childImageSharp {
                   fluid(maxWidth: 80) {
@@ -72,18 +75,20 @@ const Testimonials: React.FC = () => {
             const {
               id,
               html,
-              frontmatter: { cover, title, subtitle }
+              frontmatter: { cover, title, subtitle, url }
             } = item.node;
 
             return (
               <Styled.Testimonial key={id}>
-                <Styled.Image>
-                  <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                </Styled.Image>
-                <div style={{ marginBottom: "1rem" }}>
-                  <Styled.Title>{title}</Styled.Title>
-                  <Styled.SubTitle>{subtitle}</Styled.SubTitle>
-                </div>
+                <a href={url} target='_blank'>
+                  <Styled.Image>
+                    <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                  </Styled.Image>
+                  <div style={{ marginBottom: "1rem" }}>
+                    <Styled.Title>{title}</Styled.Title>
+                    <Styled.SubTitle>{subtitle}</Styled.SubTitle>
+                  </div>
+                </a>
                 <FormatHtml content={html} />
               </Styled.Testimonial>
             );
