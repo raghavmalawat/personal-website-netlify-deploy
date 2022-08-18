@@ -47,10 +47,10 @@ const MainNav: React.FC = () => {
             {item.title}
           </Styled.MainNavItem>
         ))}
+        <Styled.Linkk href={"https://drive.google.com/file/d/14y_0gDuvDSgUAt49T2Yj5y0MYdAp8ewM/view?usp=sharing"} target="_blank" rel="noreferrer">
+          Resume
+        </Styled.Linkk>
       </Styled.MainNav>
-      <Styled.Linkk href={"https://drive.google.com/file/d/14y_0gDuvDSgUAt49T2Yj5y0MYdAp8ewM/view?usp=sharing"} target="_blank" rel="noreferrer">
-        Resume
-      </Styled.Linkk>
       <Styled.ToogleMainNav open={open} onClick={() => setOpen(!open)}>
         <span />
         <span />
