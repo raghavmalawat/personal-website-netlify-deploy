@@ -47,7 +47,7 @@ const MainNav: React.FC = () => {
             {item.title}
           </Styled.MainNavItem>
         ))}
-        <Styled.Linkk href={"https://drive.google.com/file/d/14y_0gDuvDSgUAt49T2Yj5y0MYdAp8ewM/view?usp=sharing"} target="_blank" rel="noreferrer">
+        <Styled.Linkk href={"https://drive.google.com/file/d/1iaRBpDHT254OiFkrP34NPFIjb2lSTapR/view?usp=sharing"} target="_blank" rel="noreferrer">
           Resume
         </Styled.Linkk>
       </Styled.MainNav>
