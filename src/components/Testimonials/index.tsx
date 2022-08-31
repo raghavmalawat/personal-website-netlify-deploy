@@ -21,6 +21,7 @@ interface Testimonial {
       title: string;
       subtitle: string;
       url: string;
+      date: string;
       cover: {
         childImageSharp: {
           fluid: ImageSharpFluid;
@@ -40,7 +41,10 @@ const Testimonials: React.FC = () => {
           url
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "testimonials" } } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { category: { eq: "testimonials" } } }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
         edges {
           node {
             id
