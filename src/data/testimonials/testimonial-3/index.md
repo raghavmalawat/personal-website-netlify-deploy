@@ -1,8 +1,8 @@
 ---
 category: 'testimonials'
 cover: './rajat.jpeg'
-title: 'Rajat chandak'
-subtitle: 'Tech Lead, CoLearn'
+title: 'Rajat Chandak'
+subtitle: 'Tech Lead, CoLearn, ex - GoJek'
 url: 'https://www.linkedin.com/in/rajat-chandak-28b184a1'
 date: '2020-12-22'
 ---

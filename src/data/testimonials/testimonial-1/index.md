@@ -2,7 +2,7 @@
 category: 'testimonials'
 cover: './testimonial-1.jpg'
 title: 'Satej Sirur'
-subtitle: 'CEO, Rocketium'
+subtitle: 'CEO, Rocketium, ex - AWS, Microsoft'
 url: 'https://www.linkedin.com/in/satejs'
 date: '2020-12-24'
 ---
